@@ -10,7 +10,7 @@ namespace Ynov.QuizYnov.Business.Services
             {
                
                 Id = new Guid("aa17e21e-4254-4738-9d3d-33df27c2747a"),
-                Category = new Category() {Id = 1, Name = "développement"},
+                Category = new Category() {Id = 1, Name = "Développement Back-end"},
                 Description = "Viens tester tes connaissances appronfondie en ASP.NET Core",
                 Difficulty = 3,
                 Name = "Défi ASP.NET Core",
@@ -79,7 +79,7 @@ namespace Ynov.QuizYnov.Business.Services
             new Quiz
             {
                 Id = new Guid("beb83ab9-a777-4b9e-8057-966f1d58e80e"),
-                Category = new Category() {Id = 2, Name = "css"},
+                Category = new Category() {Id = 2, Name = "Développement Front-end"},
                 Description = "Test de connaissances sur CSS",
                 Difficulty = 1,
                 Name = "CSS pour débutant",
@@ -146,7 +146,7 @@ namespace Ynov.QuizYnov.Business.Services
             new Quiz
             {
                 Id = new Guid("ab28e223-d8b7-49a6-81ef-99d3c2749d3b"),
-                Category = new Category() { Id = 2, Name = "css" },
+                Category = new Category() { Id = 2, Name = "Développement Front-end" },
                 Description = "Découvre à quel point tu maîtrises CSS et ses subtilités.",
                 Difficulty = 2,
                 Name = "CSS Intermediaire",
@@ -191,8 +191,8 @@ namespace Ynov.QuizYnov.Business.Services
             new Quiz
             {
                 Id = new Guid("e4165ac1-039a-4f8f-9ed2-aac321b4b084"),
-                Category = new Category() { Id = 3, Name = "javascript" },
-                Description = "DÉvalue tes connaissances en JavaScript, des bases aux concepts avancés.",
+                Category = new Category() { Id = 2, Name = "Développement Front-end" },
+                Description = "Évalue tes connaissances en JavaScript, des bases aux concepts avancés.",
                 Difficulty = 2,
                 Name = "Défi JavaScript",
                 Published = new DateTime(2023, 03, 15, 14, 45, 00),
@@ -255,6 +255,74 @@ namespace Ynov.QuizYnov.Business.Services
                     }
                 }
             },
+            new Quiz
+            {
+                Id = new Guid("a0b1c2d3-e4f5-6789-1011-121314151617"),
+                Category = new Category() { Id = 3, Name = "Culture Générale en Développement" },
+                Description = "Testez vos connaissances sur l'histoire du développement informatique, des technologies marquantes aux figures emblématiques du domaine.",
+                Difficulty = 2,
+                Name = "Horizons du Développement",
+                Published = new DateTime(2025, 01, 15, 10, 00, 00),
+                Questions = new List<Question>
+                {
+                    new Question
+                    {
+                        Id = new Guid("12345678-90ab-cdef-1011-121314151617"),
+                        Text = "Qui est connu comme le père de l'informatique moderne ?",
+                        Answers = new List<Answer>
+                        {
+                            new Answer { Text = "Alan Turing", IsCorrect = true },
+                            new Answer { Text = "Bill Gates", IsCorrect = false },
+                            new Answer { Text = "Steve Jobs", IsCorrect = false }
+                        }
+                    },
+                    new Question
+                    {
+                        Id = new Guid("23456789-01ab-cdef-1011-121314151617"),
+                        Text = "Quelle année marque le lancement du premier site web ?",
+                        Answers = new List<Answer>
+                        {
+                            new Answer { Text = "1983", IsCorrect = false },
+                            new Answer { Text = "1991", IsCorrect = true },
+                            new Answer { Text = "1998", IsCorrect = false }
+                        }
+                    },
+                    new Question
+                    {
+                        Id = new Guid("34567890-12ab-cdef-1011-121314151617"),
+                        Text = "Quel langage de programmation est considéré comme le plus ancien encore utilisé aujourd'hui ?",
+                        Answers = new List<Answer>
+                        {
+                            new Answer { Text = "COBOL", IsCorrect = true },
+                            new Answer { Text = "C", IsCorrect = false },
+                            new Answer { Text = "Java", IsCorrect = false }
+                        }
+                    },
+                    new Question
+                    {
+                        Id = new Guid("45678901-23ab-cdef-1011-121314151617"),
+                        Text = "Quel projet est le premier logiciel open-source ?",
+                        Answers = new List<Answer>
+                        {
+                            new Answer { Text = "GNU", IsCorrect = false },
+                            new Answer { Text = "Linux", IsCorrect = false },
+                            new Answer { Text = "Netscape Navigator", IsCorrect = true }
+                        }
+                    },
+                    new Question
+                    {
+                        Id = new Guid("56789012-34ab-cdef-1011-121314151617"),
+                        Text = "Qui a inventé le premier compilateur ?",
+                        Answers = new List<Answer>
+                        {
+                            new Answer { Text = "Grace Hopper", IsCorrect = true },
+                            new Answer { Text = "Ada Lovelace", IsCorrect = false },
+                            new Answer { Text = "Margaret Hamilton", IsCorrect = false }
+                        }
+                    }
+                }
+            }
+
         };
 
         public IEnumerable<Quiz> GetAll()
